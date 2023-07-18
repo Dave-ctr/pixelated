@@ -1,14 +1,22 @@
-html, body, .viewport {
+html,
+body,
+.viewport
+{
   width: 100%;
   height: 100%;
   margin: 0;
 }
 
-#app {
+#app
+{
   width: 100%;
-}
-
-div {
   display: flex;
   flex-wrap: wrap;
+}
+
+.pixel
+{
+  height: 22px;
+  width: 22px;
+  background-color: cornflowerblue;
 }

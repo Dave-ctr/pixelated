@@ -72,7 +72,7 @@ We want to create **colourful** randomized pixel art.
 
   - the _first_ set of curly braces indicates that we are using a JavaScript value in JSX
   - the _second_ set of curly braces indicates an ordinary JavaScript object literal
-  - instead of `font-family`, we use camelcase (`fontFamily`)
+  - instead of `font-family`, we use camelCase (`fontFamily`)
 
   Depending on what you passed to the `style` attribute, you may or may not see a change to the div in the browser, but you should see the style attribute when you inspect it.
   </details>
@@ -158,7 +158,7 @@ It's high time we stopped being so monochromatic.
 
     When you refresh the page, what you're aiming for is something like this:
 
-    ![A grid of multicoloured squares with no particular rhyme or reason](./_images/stage3.jpg)
+    ![A grid of multi-coloured squares with no particular rhyme or reason](./_images/stage3.jpg)
 
     That's more like it!
 
