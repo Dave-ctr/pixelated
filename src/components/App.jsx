@@ -1,710 +1,361 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Pixel from './Pixel'
 
 function App() {
+  const [style, setStyle] = useState({
+    height: '44px',
+    width: '44px',
+    backgroundColor: 'cornflowerblue',
+  })
+
+  const handleHover = () => {
+    // Update the style object when the component is hovered
+    setStyle({
+      height: '44px',
+      width: '44px',
+      backgroundColor: 'red',
+    })
+  }
+
   return (
     <>
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
+      <Pixel style={style} onMouseEnter={handleHover} />
     </>
   )
 }

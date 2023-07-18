@@ -128,6 +128,22 @@ To easily work with the values we use in the `style` JSX attribute, we should pu
 
   What you've just done is make your component more **flexible**. We can now manipulate the values any way we'd like using the `setStyle` function.
 
+Note to Self ~
+
+In the initial implementation, all Pixel components were sharing the same style state from the App component. This means that when one Pixel component updated the style state on hover, it caused a re-render of all Pixel components, resulting in all of them displaying the updated style.
+
+To address this, we modified the Pixel component to have its own local state for the style. Here's how it resolves the issue:
+
+    Each Pixel component now maintains its own state using the useState hook. This means that every Pixel component instance has its own separate style state.
+
+    When the handleHover function is triggered on hover, it updates the local style state of that particular Pixel component using the setStyle function. This change only affects the specific Pixel component invoking the handleHover function.
+
+    Since each Pixel component manages its own state, only the Pixel component being hovered over updates its local style state, causing a re-render of that specific Pixel component with the new style.
+
+    The other Pixel components maintain their own separate style state and are not affected by the hover action on a different Pixel component. Therefore, each Pixel component can now have an independent style.
+
+By introducing local state in the Pixel component, we avoid the issue of shared state among multiple components, allowing each Pixel component to manage its own style individually.
+
   </details>
 
 ### 5. Rainbow pixels
@@ -144,25 +160,27 @@ It's high time we stopped being so monochromatic.
     <summary>The comment for offline</summary>
     "There are a variety of methods for creating random hex color codes in the blog post Random hex color code generator in JavaScript. You need to pad with zeros when the random value is less than 0×100000, so here's the correct version:
 
-    `var randomColor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});`
+  `var randomColor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});`
 
-    That replaces each of six 0s with a random hex digit, so it's sure to end up with a full six-digit valid color value."
+  That replaces each of six 0s with a random hex digit, so it's sure to end up with a full six-digit valid color value."
 
     </details>
 
-    ```js
-    `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
-    ```
+  ```js
+  ;`#${Math.floor(Math.random() * 0x1000000)
+    .toString(16)
+    .padStart(6, 0)}`
+  ```
 
-    Edit the initial state for `style` so that it uses the above code to generate a random hex colour (rather than a string like 'cornflowerblue' or 'red').
+  Edit the initial state for `style` so that it uses the above code to generate a random hex colour (rather than a string like 'cornflowerblue' or 'red').
 
-    When you refresh the page, what you're aiming for is something like this:
+  When you refresh the page, what you're aiming for is something like this:
 
-    ![A grid of multi-coloured squares with no particular rhyme or reason](./_images/stage3.jpg)
+  ![A grid of multi-coloured squares with no particular rhyme or reason](./_images/stage3.jpg)
 
-    That's more like it!
+  That's more like it!
 
-    > **Don't get bogged down in exactly how this random hex colour generator works!** It's no different to including a Node library in your program, like `fs` or `knex`: you don't need to understand all the code it contains in order to use it. It's a good instinct to understand the code you put in your program, but we're giving you express permission to copy/paste this one. You can also try it out in the Node REPL (with `console.log()`) to see it in action.
+  > **Don't get bogged down in exactly how this random hex colour generator works!** It's no different to including a Node library in your program, like `fs` or `knex`: you don't need to understand all the code it contains in order to use it. It's a good instinct to understand the code you put in your program, but we're giving you express permission to copy/paste this one. You can also try it out in the Node REPL (with `console.log()`) to see it in action.
 
   </details>
 

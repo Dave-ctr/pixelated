@@ -1,17 +1,21 @@
 import React from 'react'
 
 const Pixel = () => {
-  return (
-    <div
-      className="pixel"
-      style={{
-        height: '100px',
-        width: '100px',
-        backgroundColor: 'cornflowerblue',
-      }}
-      //I have specificity!! Mwah Ha Ha!!
-    ></div>
-  )
+  const [style, setStyle] = React.useState({
+    height: '44px',
+    width: '44px',
+    backgroundColor: 'cornflowerblue',
+  })
+
+  const handleHover = () => {
+    setStyle({
+      height: '44px',
+      width: '44px',
+      backgroundColor: 'red',
+    })
+  }
+
+  return <div className="pixel" style={style} onMouseEnter={handleHover}></div>
 }
 
 export default Pixel
