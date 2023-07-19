@@ -128,22 +128,6 @@ To easily work with the values we use in the `style` JSX attribute, we should pu
 
   What you've just done is make your component more **flexible**. We can now manipulate the values any way we'd like using the `setStyle` function.
 
-Note to Self ~
-
-In the initial implementation, all Pixel components were sharing the same style state from the App component. This means that when one Pixel component updated the style state on hover, it caused a re-render of all Pixel components, resulting in all of them displaying the updated style.
-
-To address this, we modified the Pixel component to have its own local state for the style. Here's how it resolves the issue:
-
-    Each Pixel component now maintains its own state using the useState hook. This means that every Pixel component instance has its own separate style state.
-
-    When the handleHover function is triggered on hover, it updates the local style state of that particular Pixel component using the setStyle function. This change only affects the specific Pixel component invoking the handleHover function.
-
-    Since each Pixel component manages its own state, only the Pixel component being hovered over updates its local style state, causing a re-render of that specific Pixel component with the new style.
-
-    The other Pixel components maintain their own separate style state and are not affected by the hover action on a different Pixel component. Therefore, each Pixel component can now have an independent style.
-
-By introducing local state in the Pixel component, we avoid the issue of shared state among multiple components, allowing each Pixel component to manage its own style individually.
-
   </details>
 
 ### 5. Rainbow pixels
