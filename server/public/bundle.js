@@ -1060,17 +1060,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 const Pixel = () => {
-  const [style, setStyle] = react__WEBPACK_IMPORTED_MODULE_0__.useState({
-    height: '44px',
-    width: '44px',
-    backgroundColor: 'cornflowerblue'
-  });
-  const handleHover = () => {
-    setStyle({
+  const generateRandomColor = () => {
+    const randomColor = `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, '0')}`;
+    return randomColor;
+  };
+  const [style, setStyle] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(() => {
+    const randomColor = generateRandomColor();
+    return {
       height: '44px',
       width: '44px',
-      backgroundColor: 'red'
-    });
+      backgroundColor: randomColor
+    };
+  });
+  const handleHover = () => {
+    const randomColor = generateRandomColor();
+    setStyle(prevStyle => ({
+      ...prevStyle,
+      backgroundColor: randomColor
+    }));
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "pixel",
