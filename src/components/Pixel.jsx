@@ -1,31 +1,30 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-const Pixel = () => {
+const Pixel = ({ style, updateStyle }) => {
   const generateRandomColor = () => {
-    const randomColor = `#${Math.floor(Math.random() * 0x1000000)
+    return `#${Math.floor(Math.random() * 0x1000000)
       .toString(16)
       .padStart(6, '0')}`
-    return randomColor
   }
-
-  const [style, setStyle] = useState(() => {
-    const randomColor = generateRandomColor()
-    return {
-      height: '44px',
-      width: '44px',
-      backgroundColor: randomColor,
-    }
-  })
 
   const handleHover = () => {
     const randomColor = generateRandomColor()
-    setStyle((prevStyle) => ({
-      ...prevStyle,
-      backgroundColor: randomColor,
-    }))
+    updateStyle(randomColor)
   }
 
-  return <div className="pixel" style={style} onMouseEnter={handleHover}></div>
+  const handleClick = () => {
+    const randomColor = generateRandomColor()
+    updateStyle(randomColor)
+  }
+
+  return (
+    <div
+      className="pixel"
+      style={style}
+      onMouseEnter={handleHover}
+      onClick={handleClick}
+    ></div>
+  )
 }
 
 export default Pixel
