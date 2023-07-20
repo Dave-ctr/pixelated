@@ -25,11 +25,11 @@ function App() {
   // Create an array of state objects for each Pixel
   const [pixels, setPixels] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(() => {
     const initialColors = Array.from({
-      length: 648
+      length: 2850
     }, () => generateRandomColor());
     return initialColors.map(color => ({
-      height: '44px',
-      width: '44px',
+      height: '21px',
+      width: '21px',
       backgroundColor: color
     }));
   });

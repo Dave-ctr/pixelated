@@ -11,12 +11,12 @@ function App() {
 
   // Create an array of state objects for each Pixel
   const [pixels, setPixels] = useState(() => {
-    const initialColors = Array.from({ length: 648 }, () =>
+    const initialColors = Array.from({ length: 2850 }, () =>
       generateRandomColor()
     )
     return initialColors.map((color) => ({
-      height: '44px',
-      width: '44px',
+      height: '21px',
+      width: '21px',
       backgroundColor: color,
     }))
   })
