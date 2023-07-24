@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Pixel from './Pixel'
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
       .padStart(6, '0')}`
   }
 
-  // Create an array of state objects for each Pixel
+  // Create an array of state objects for each Pixel using `useState` hook.
   const [pixels, setPixels] = useState(() => {
     const initialColors = Array.from({ length: 2850 }, () =>
       generateRandomColor()
@@ -33,6 +33,46 @@ function App() {
       return newPixels
     })
   }
+
+  // Use a ref to keep track of whether the right mouse button is being held down
+  const rightMouseDownRef = useRef(false)
+
+  // Event listener for when the right mouse button is pressed down
+  const handleMouseDown = (evt) => {
+    if (evt.button === 2) {
+      rightMouseDownRef.current = true
+    }
+  }
+
+  // Event listener for when the right mouse button is released
+  const handleMouseUp = (evt) => {
+    if (evt.button === 2) {
+      rightMouseDownRef.current = false
+    }
+  }
+
+  // Set up the event listeners using useEffect
+  useEffect(() => {
+    document.addEventListener('mousedown', handleMouseDown)
+    document.addEventListener('mouseup', handleMouseUp)
+
+    // Clean up the event listeners on unmount
+    return () => {
+      document.removeEventListener('mousedown', handleMouseDown)
+      document.removeEventListener('mouseup', handleMouseUp)
+    }
+  }, [])
+
+  // Set up the timer using `useEffect` to change colors of all pixels every 2 seconds.
+  useEffect(() => {
+    const intervalId = setInterval(
+      () => updatePixelStyle(Math.floor(Math.random() * 2850)),
+      2000
+    ) // Change color every 2 seconds
+
+    // Clean up the interval on unmount
+    return () => clearInterval(intervalId)
+  }, [])
 
   return (
     <>
