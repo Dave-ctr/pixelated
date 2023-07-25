@@ -17,16 +17,6 @@ const Pixel = ({ style, updateStyle }) => {
     updateStyle(randomColor)
   }
 
-  const handleContextMenu = (evt) => {
-    evt.preventDefault()
-  }
-
-  const handleMouseDown = (evt) => {
-    if (evt.button === 2) {
-      evt.target.style.backgroundColor = 'black'
-    }
-  }
-
   const handleDoubleClick = (evt) => {
     evt.target.style.backgroundColor = 'white'
   }
@@ -41,9 +31,6 @@ const Pixel = ({ style, updateStyle }) => {
       style={style}
       onMouseEnter={handleHover}
       onClick={handleClick}
-      onContextMenu={handleContextMenu}
-      onMouseDown={handleMouseDown}
-      onMouseUp={handleMouseUp}
       onDoubleClick={handleDoubleClick}
       onDragEnter={handleDragEnter}
       draggable

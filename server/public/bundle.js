@@ -17,16 +17,55 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function App() {
-  // ... (rest of the code)
+  // Generate an array of random colors
+  const generateRandomColor = () => {
+    return `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, '0')}`;
+  };
 
-  // Set up the timer using `useEffect` to change colors of all pixels every 2 seconds.
+  // Create an array of state objects for each Pixel
+  const [pixels, setPixels] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(() => {
+    const initialColors = Array.from({
+      length: 2850
+    }, () => generateRandomColor());
+    return initialColors.map(color => ({
+      height: '21px',
+      width: '21px',
+      backgroundColor: color
+    }));
+  });
+
+  // Update a single Pixel's style based on its index
+  const updatePixelStyle = index => {
+    setPixels(prevPixels => {
+      const randomColor = generateRandomColor();
+      const newPixels = [...prevPixels];
+      newPixels[index] = {
+        ...newPixels[index],
+        backgroundColor: randomColor
+      };
+      return newPixels;
+    });
+  };
+
+  // Function to update all pixels' styles with random colors
+  const updateAllPixelStyles = () => {
+    setPixels(prevPixels => {
+      const updatedPixels = prevPixels.map(() => ({
+        height: '21px',
+        width: '21px',
+        backgroundColor: generateRandomColor()
+      }));
+      return updatedPixels;
+    });
+  };
+
+  // Set up the timer using useEffect
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    const intervalId = setInterval(() => updatePixelStyle(Math.floor(Math.random() * 2850)), 2000);
+    const intervalId = setInterval(updateAllPixelStyles, 2000); // Change color every 2 seconds
 
-    // Clean up the interval when the component unmounts
+    // Clean up the interval on unmount
     return () => clearInterval(intervalId);
-  }, []); // Properly provide an empty dependency array
-
+  }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, pixels.map((style, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Pixel__WEBPACK_IMPORTED_MODULE_1__["default"], {
     key: index,
     style: style,
@@ -65,14 +104,6 @@ const Pixel = _ref => {
     const randomColor = generateRandomColor();
     updateStyle(randomColor);
   };
-  const handleContextMenu = evt => {
-    evt.preventDefault();
-  };
-  const handleMouseDown = evt => {
-    if (evt.button === 2) {
-      evt.target.style.backgroundColor = 'black';
-    }
-  };
   const handleDoubleClick = evt => {
     evt.target.style.backgroundColor = 'white';
   };
@@ -84,9 +115,6 @@ const Pixel = _ref => {
     style: style,
     onMouseEnter: handleHover,
     onClick: handleClick,
-    onContextMenu: handleContextMenu,
-    onMouseDown: handleMouseDown,
-    onMouseUp: handleMouseUp,
     onDoubleClick: handleDoubleClick,
     onDragEnter: handleDragEnter,
     draggable: true

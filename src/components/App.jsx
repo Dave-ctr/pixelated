@@ -1,19 +1,58 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import Pixel from './Pixel'
 
 function App() {
-  // ... (rest of the code)
+  // Generate an array of random colors
+  const generateRandomColor = () => {
+    return `#${Math.floor(Math.random() * 0x1000000)
+      .toString(16)
+      .padStart(6, '0')}`
+  }
 
-  // Set up the timer using `useEffect` to change colors of all pixels every 2 seconds.
-  useEffect(() => {
-    const intervalId = setInterval(
-      () => updatePixelStyle(Math.floor(Math.random() * 2850)),
-      2000
+  // Create an array of state objects for each Pixel
+  const [pixels, setPixels] = useState(() => {
+    const initialColors = Array.from({ length: 2850 }, () =>
+      generateRandomColor()
     )
+    return initialColors.map((color) => ({
+      height: '21px',
+      width: '21px',
+      backgroundColor: color,
+    }))
+  })
 
-    // Clean up the interval when the component unmounts
+  // Update a single Pixel's style based on its index
+  const updatePixelStyle = (index) => {
+    setPixels((prevPixels) => {
+      const randomColor = generateRandomColor()
+      const newPixels = [...prevPixels]
+      newPixels[index] = {
+        ...newPixels[index],
+        backgroundColor: randomColor,
+      }
+      return newPixels
+    })
+  }
+
+  // Function to update all pixels' styles with random colors
+  const updateAllPixelStyles = () => {
+    setPixels((prevPixels) => {
+      const updatedPixels = prevPixels.map(() => ({
+        height: '21px',
+        width: '21px',
+        backgroundColor: generateRandomColor(),
+      }))
+      return updatedPixels
+    })
+  }
+
+  // Set up the timer using useEffect
+  useEffect(() => {
+    const intervalId = setInterval(updateAllPixelStyles, 2000) // Change color every 2 seconds
+
+    // Clean up the interval on unmount
     return () => clearInterval(intervalId)
-  }, []) // Properly provide an empty dependency array
+  }, [])
 
   return (
     <>
