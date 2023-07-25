@@ -17,72 +17,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function App() {
-  // Generate an array of random colors
-  const generateRandomColor = () => {
-    return `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, '0')}`;
-  };
-
-  // Create an array of state objects for each Pixel using `useState` hook.
-  const [pixels, setPixels] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(() => {
-    const initialColors = Array.from({
-      length: 2850
-    }, () => generateRandomColor());
-    return initialColors.map(color => ({
-      height: '21px',
-      width: '21px',
-      backgroundColor: color
-    }));
-  });
-
-  // Update a single Pixel's style based on its index
-  const updatePixelStyle = index => {
-    setPixels(prevPixels => {
-      const randomColor = generateRandomColor();
-      const newPixels = [...prevPixels];
-      newPixels[index] = {
-        ...newPixels[index],
-        backgroundColor: randomColor
-      };
-      return newPixels;
-    });
-  };
-
-  // Use a ref to keep track of whether the right mouse button is being held down
-  const rightMouseDownRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(false);
-
-  // Event listener for when the right mouse button is pressed down
-  const handleMouseDown = evt => {
-    if (evt.button === 2) {
-      rightMouseDownRef.current = true;
-    }
-  };
-
-  // Event listener for when the right mouse button is released
-  const handleMouseUp = evt => {
-    if (evt.button === 2) {
-      rightMouseDownRef.current = false;
-    }
-  };
-
-  // Set up the event listeners using useEffect
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    document.addEventListener('mousedown', handleMouseDown);
-    document.addEventListener('mouseup', handleMouseUp);
-
-    // Clean up the event listeners on unmount
-    return () => {
-      document.removeEventListener('mousedown', handleMouseDown);
-      document.removeEventListener('mouseup', handleMouseUp);
-    };
-  }, []);
+  // ... (rest of the code)
 
   // Set up the timer using `useEffect` to change colors of all pixels every 2 seconds.
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    const intervalId = setInterval(() => updatePixelStyle(Math.floor(Math.random() * 2850)), 2000); // Change color every 2 seconds
+    const intervalId = setInterval(() => updatePixelStyle(Math.floor(Math.random() * 2850)), 2000);
 
-    // Clean up the interval on unmount
+    // Clean up the interval when the component unmounts
     return () => clearInterval(intervalId);
-  }, []);
+  }, []); // Properly provide an empty dependency array
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, pixels.map((style, index) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Pixel__WEBPACK_IMPORTED_MODULE_1__["default"], {
     key: index,
     style: style,
@@ -123,31 +67,17 @@ const Pixel = _ref => {
   };
   const handleContextMenu = evt => {
     evt.preventDefault();
-    evt.target.style.backgroundColor = 'black';
   };
-
-  // Use a ref to keep track of whether the right mouse button is being held down
-  const rightMouseDownRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(false);
   const handleMouseDown = evt => {
     if (evt.button === 2) {
-      rightMouseDownRef.current = true;
       evt.target.style.backgroundColor = 'black';
-    }
-  };
-  const handleMouseUp = evt => {
-    if (evt.button === 2) {
-      rightMouseDownRef.current = false;
     }
   };
   const handleDoubleClick = evt => {
     evt.target.style.backgroundColor = 'white';
   };
   const handleDragEnter = evt => {
-    if (rightMouseDownRef.current) {
-      evt.target.style.backgroundColor = 'black';
-    } else {
-      evt.target.style.backgroundColor = 'yellow';
-    }
+    evt.target.style.backgroundColor = 'yellow';
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "pixel",

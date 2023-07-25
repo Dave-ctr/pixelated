@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 
 const Pixel = ({ style, updateStyle }) => {
   const generateRandomColor = () => {
@@ -19,22 +19,11 @@ const Pixel = ({ style, updateStyle }) => {
 
   const handleContextMenu = (evt) => {
     evt.preventDefault()
-    evt.target.style.backgroundColor = 'black'
   }
-
-  // Use a ref to keep track of whether the right mouse button is being held down
-  const rightMouseDownRef = useRef(false)
 
   const handleMouseDown = (evt) => {
     if (evt.button === 2) {
-      rightMouseDownRef.current = true
       evt.target.style.backgroundColor = 'black'
-    }
-  }
-
-  const handleMouseUp = (evt) => {
-    if (evt.button === 2) {
-      rightMouseDownRef.current = false
     }
   }
 
@@ -43,11 +32,7 @@ const Pixel = ({ style, updateStyle }) => {
   }
 
   const handleDragEnter = (evt) => {
-    if (rightMouseDownRef.current) {
-      evt.target.style.backgroundColor = 'black'
-    } else {
-      evt.target.style.backgroundColor = 'yellow'
-    }
+    evt.target.style.backgroundColor = 'yellow'
   }
 
   return (

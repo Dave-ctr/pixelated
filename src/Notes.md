@@ -38,3 +38,28 @@ Performance-wise, both implementations are generally fine for small arrays of co
 In summary, using an array of components with explicit keys is generally preferred for rendering large arrays of components or dynamically generating components based on data. However, for smaller arrays, both implementations are functionally equivalent, and you can choose the one that fits your coding style and readability preferences.
 
   </details>
+To determine if the browser is causing the issue with left-click drag or right-click drag, you can perform a few tests and checks. Here's a step-by-step guide to help you investigate:
+
+    Cross-browser testing: First, verify if the issue is specific to a particular browser or if it occurs across multiple browsers. Test the left-click drag and right-click drag functionality in different browsers like Chrome, Firefox, Safari, Edge, etc. If the issue is isolated to one browser, it's more likely related to that particular browser's behavior.
+
+    Check browser documentation: If you find that the issue is specific to a certain browser, review the official documentation for that browser to see if there are any known limitations or differences in handling mouse events. Browser vendors often document quirks, differences, and known issues on their websites.
+
+    Console logs and debugging: Use the browser's developer tools to check for any error messages or warnings related to the mouse events. Inspect the console logs and investigate if any errors are being thrown during the left-click or right-click drag interactions.
+
+    Event behavior detection: In JavaScript, you can inspect the event object to check for the button property during mouse events. The button property indicates which mouse button triggered the event. For example:
+
+javascript
+
+function handleMouseMove(event) {
+if (event.button === 0) {
+console.log('Left-click drag');
+} else if (event.button === 2) {
+console.log('Right-click drag');
+}
+}
+
+    Preventing default behavior: In some cases, as mentioned earlier, right-clicking may trigger a context menu by default in certain browsers. Developers often need to prevent this default behavior to enable smooth right-click dragging. Check if there are any handlers that prevent the default context menu behavior for right-click events.
+
+    Test on different devices: If the issue is more complex and involves touch or mobile interactions, test the behavior on touch-enabled devices to see if the issue is present there as well. This might provide additional insights into the problem.
+
+By performing these tests and checks, you can get a better understanding of whether the issue is related to browser behavior or if it's due to the specific implementation of the left-click and right-click drag functionality in the application. Based on the findings, you can then focus on addressing the problem accordingly.
